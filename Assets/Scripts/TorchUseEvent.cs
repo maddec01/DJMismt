@@ -5,7 +5,6 @@ using UnityEngine;
 public class TorchUseEvent : MonoBehaviour {
 
 	public GameObject TorchLight;
-	public CheckPointControl CheckPoint;
 
 	public void LightTheTorch () {
 		GameMechanics.TourchLightStatus = true;

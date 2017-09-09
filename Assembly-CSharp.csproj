@@ -98,6 +98,7 @@
      <Compile Include="Assets\Scripts\CheckPointControl.cs" />
      <Compile Include="Assets\Scripts\GameMechanics.cs" />
      <Compile Include="Assets\Scripts\GameOverScript.cs" />
+     <Compile Include="Assets\Scripts\IntroManagement.cs" />
      <Compile Include="Assets\Scripts\MenuScript.cs" />
      <Compile Include="Assets\Scripts\TorchLightControl.cs" />
      <Compile Include="Assets\Scripts\TorchPickup.cs" />

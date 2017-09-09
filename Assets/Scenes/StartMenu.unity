@@ -14,20 +14,20 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 8
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.051470578, g: 0.051470578, b: 0.051470578, a: 1}
-  m_FogMode: 2
+  m_FogMode: 3
   m_FogDensity: 0.0666
   m_LinearFogStart: 23.2
   m_LinearFogEnd: 178.2
-  m_AmbientSkyColor: {r: 0.2352941, g: 0.2352941, b: 0.2352941, a: 3.33}
+  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 3.33}
   m_AmbientEquatorColor: {r: 0.37962, g: 0.41625, b: 0.44289, a: 3.33}
   m_AmbientGroundColor: {r: 0.15651, g: 0.14319, b: 0.11655, a: 3.33}
   m_AmbientIntensity: 4.3
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.14176038, g: 0.21947403, b: 0.41911763, a: 1}
   m_SkyboxMaterial: {fileID: 0}
-  m_HaloStrength: 0.695
+  m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 5
   m_HaloTexture: {fileID: 0}
@@ -35,7 +35,7 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 0
+  m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
@@ -50,8 +50,8 @@ LightmapSettings:
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
-    m_EnvironmentLightingMode: 1
-    m_EnableBakedLightmaps: 0
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 9
@@ -618,6 +618,53 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 544229407}
+--- !u!1001 &572536698
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4187630248253284, guid: c44976c8de1989b41918b4fede5bc5e4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 25.999863
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187630248253284, guid: c44976c8de1989b41918b4fede5bc5e4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.09192276
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187630248253284, guid: c44976c8de1989b41918b4fede5bc5e4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -93.44048
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187630248253284, guid: c44976c8de1989b41918b4fede5bc5e4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187630248253284, guid: c44976c8de1989b41918b4fede5bc5e4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187630248253284, guid: c44976c8de1989b41918b4fede5bc5e4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187630248253284, guid: c44976c8de1989b41918b4fede5bc5e4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187630248253284, guid: c44976c8de1989b41918b4fede5bc5e4, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 108771901663042010, guid: c44976c8de1989b41918b4fede5bc5e4,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 0.4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c44976c8de1989b41918b4fede5bc5e4, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &747144275
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,7 +841,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.066176474, g: 0.066176474, b: 0.066176474, a: 0.019607844}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0

@@ -123,6 +123,7 @@ public class GameMechanics : MonoBehaviour {
 	}
 
 	public void ExitToMain () {
+		Time.timeScale = 1;
 		SceneManager.LoadScene("StartMenu");
 	}
 }

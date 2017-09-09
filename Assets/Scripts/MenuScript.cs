@@ -29,7 +29,7 @@ public class MenuScript : MonoBehaviour
 	}
 
 	public void StartLevel () {
-		SceneManager.LoadScene("MainGame");
+		SceneManager.LoadScene("IntroScene");
 	}
 
 	public void ExitGame () {
