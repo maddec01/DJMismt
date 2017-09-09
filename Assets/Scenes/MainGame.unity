@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 8
   m_Fog: 0
-  m_FogColor: {r: 0.051470578, g: 0.051470578, b: 0.051470578, a: 1}
+  m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.06
   m_LinearFogStart: 23.2
@@ -664,7 +664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &93423274
 RectTransform:
   m_ObjectHideFlags: 0
@@ -970,7 +970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ec94feb55d74448afff8a895309ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CheckPointFlame: {fileID: 0}
+  CheckPointFlame: {fileID: 542868665}
   TorchLight: {fileID: 1202903556}
   Popup: {fileID: 683883623}
 --- !u!135 &104915739
@@ -1144,7 +1144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ec94feb55d74448afff8a895309ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CheckPointFlame: {fileID: 0}
+  CheckPointFlame: {fileID: 2062758407}
   TorchLight: {fileID: 1202903556}
   Popup: {fileID: 683883623}
 --- !u!135 &124667460
@@ -6672,7 +6672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ec94feb55d74448afff8a895309ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CheckPointFlame: {fileID: 0}
+  CheckPointFlame: {fileID: 1916893909}
   TorchLight: {fileID: 1202903556}
   Popup: {fileID: 683883623}
 --- !u!135 &536795795
@@ -11854,7 +11854,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 4.41
+  m_Intensity: 2.2
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 1
@@ -12075,7 +12075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ec94feb55d74448afff8a895309ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CheckPointFlame: {fileID: 0}
+  CheckPointFlame: {fileID: 999663867}
   TorchLight: {fileID: 1202903556}
   Popup: {fileID: 683883623}
 --- !u!135 &814504096
@@ -12285,7 +12285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ec94feb55d74448afff8a895309ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CheckPointFlame: {fileID: 0}
+  CheckPointFlame: {fileID: 1192723180}
   TorchLight: {fileID: 1202903556}
   Popup: {fileID: 683883623}
 --- !u!135 &836066798
@@ -35845,7 +35845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ec94feb55d74448afff8a895309ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CheckPointFlame: {fileID: 0}
+  CheckPointFlame: {fileID: 1056559156}
   TorchLight: {fileID: 1202903556}
   Popup: {fileID: 683883623}
 --- !u!135 &1486282457
@@ -36083,7 +36083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ec94feb55d74448afff8a895309ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CheckPointFlame: {fileID: 0}
+  CheckPointFlame: {fileID: 1433574068}
   TorchLight: {fileID: 1202903556}
   Popup: {fileID: 683883623}
 --- !u!135 &1505611012
@@ -41074,7 +41074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ec94feb55d74448afff8a895309ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CheckPointFlame: {fileID: 0}
+  CheckPointFlame: {fileID: 460047945}
   TorchLight: {fileID: 1202903556}
   Popup: {fileID: 683883623}
 --- !u!1001 &1822726960
@@ -41681,7 +41681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ec94feb55d74448afff8a895309ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CheckPointFlame: {fileID: 0}
+  CheckPointFlame: {fileID: 1659154263}
   TorchLight: {fileID: 1202903556}
   Popup: {fileID: 683883623}
 --- !u!65 &1910973422

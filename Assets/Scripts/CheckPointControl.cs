@@ -13,25 +13,25 @@ public class CheckPointControl : MonoBehaviour {
 		if (collisionInfo.collider.name == "Player") {
 			if (!CheckPointFlame.activeSelf) {
 				if (GameMechanics.TourchLightStatus == true) {
-					Popup.GetComponent<Text> ().text = "PRECIONE 'E' PARA ACENDER O CALDEIRÃO";
+					Popup.GetComponent<Text> ().text = "PRESS 'E' USE THE TORCH";
 					if (Input.GetKeyDown (KeyCode.E)) {
 						CheckPointFlame.SetActive (true);
 					}
 				} else if (GameMechanics.TourchLightStatus == false) {
 					if (GameMechanics.numberTorches == 0) {
-						Popup.GetComponent<Text> ().text = "PRECISA DE UMA TOCHA PARA ACENDER O CALDEIRÃO";
+						Popup.GetComponent<Text> ().text = "YOU NEED A TORCH TOO IGNITE";
 					} else if (GameMechanics.numberTorches > 0) {
-						Popup.GetComponent<Text> ().text = "PRECISA DE UMA TOCHA ACESA PARA ACENDER O CALDEIRÃO";
+						Popup.GetComponent<Text> ().text = "THE TORCH IS NOT IGNITED";
 					}
 				}
 			}
 			if (CheckPointFlame.activeSelf) {
 				if (GameMechanics.TourchLightStatus == false) {
 					if (GameMechanics.numberTorches == 0) {
-						Popup.GetComponent<Text> ().text = "PRECISA DE ENCONTRAR UMA TOCHA";
+						Popup.GetComponent<Text> ().text = "YOU NEED A TORCH";
 					}
 					else if (GameMechanics.numberTorches > 0) {
-						Popup.GetComponent<Text> ().text = "PRECIONE 'E' PARA ACENDER A TOCHA";
+						Popup.GetComponent<Text> ().text = "PRESS 'E' TO IGNITE TORCH";
 						if (Input.GetKeyDown (KeyCode.E)) {
 							GameMechanics.TourchLightStatus = true;
 							TorchLight.SetActive (true);
