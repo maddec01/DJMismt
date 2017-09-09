@@ -1,15 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameMechanics.cs">
     <Files>
-      <File FileName="Assets\Scripts\MenuScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameOverScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameMechanics.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TorchLightControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TorchPickup.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CheckPointControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\MouseLook.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="4" Column="1" />
+      <File FileName="Assets\Scripts\MenuScript.cs" Line="27" Column="40" />
+      <File FileName="Assets\Scripts\GameOverScript.cs" Line="4" Column="35" />
+      <File FileName="Assets\Scripts\GameMechanics.cs" Line="75" Column="33" />
+      <File FileName="Assets\Scripts\TorchPickup.cs" Line="8" Column="26" />
+      <File FileName="Assets\Scripts\TorchLightControl.cs" Line="59" Column="34" />
+      <File FileName="Assets\Scripts\CheckPointControl.cs" Line="60" Column="39" />
+      <File FileName="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\MouseLook.cs" Line="75" Column="42" />
+      <File FileName="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="20" Column="56" />
       <File FileName="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\HeadBob.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

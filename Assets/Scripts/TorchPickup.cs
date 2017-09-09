@@ -10,7 +10,7 @@ public class TorchPickup : MonoBehaviour {
 
 	void OnCollisionStay (Collision collisionInfo) {
 
-		pickPopup.GetComponent<Text>().text = "PRESS 'E' TO PICK TORCH";
+		pickPopup.GetComponent<Text>().text = "PRESS <color=#EC2027>E</color> TO PICK TORCH";
 
 		if (Input.GetKeyDown (KeyCode.E)) {
 			//First torch
