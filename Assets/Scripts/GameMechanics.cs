@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameMechanics : MonoBehaviour {
 
+	public Animator UseTorchAnimation;
 	public GameObject Torch;
 	public GameObject TorchLight;
 	public GameObject PausePanel;
@@ -39,8 +40,8 @@ public class GameMechanics : MonoBehaviour {
 			else if (numberTorches > 0 && TourchLightStatus == false) {
 				PickPopup.GetComponent<Text> ().text = "PRESS <color=#EC2027>E</color> TO LIGHT THE TORCH";
 				if (Input.GetKeyDown (KeyCode.E)) {
-					TourchLightStatus = true;
-					TorchLight.SetActive (true);
+					//This also triggers an event
+					UseTorchAnimation.PlayInFixedTime ("IgniteTorch");
 				}
 			}
 		}
@@ -49,6 +50,12 @@ public class GameMechanics : MonoBehaviour {
 	void OnCollisionExit (Collision collisionInfo) {
 		if (collisionInfo.collider.name == "modelBonfire") {
 			PickPopup.GetComponent<Text> ().text = "";
+		}
+	}
+
+	void OnTriggerEnter (Collider collisionInfo) {
+		if (collisionInfo.GetComponent<Collider>().name == "ExitTrigger") {
+			Debug.Log ("win");
 		}
 	}
 

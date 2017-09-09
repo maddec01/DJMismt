@@ -5,22 +5,26 @@ using UnityEngine.UI;
 
 public class CheckPointControl : MonoBehaviour {
 
+	public Animator UseTorchAnimation;
 	public GameObject CheckPointFlame;
 	public GameObject TorchLight;
 	public Text Popup;
 	
-	void OnCollisionStay (Collision collisionInfo) {
+	public void OnCollisionStay (Collision collisionInfo) {
 		if (collisionInfo.collider.name == "Player") {
 			if (!CheckPointFlame.activeSelf) {
 				if (GameMechanics.TourchLightStatus == true) {
 					Popup.GetComponent<Text> ().text = "PRESS <color=#EC2027>E</color> USE THE TORCH";
 					if (Input.GetKeyDown (KeyCode.E)) {
+						UseTorchAnimation.PlayInFixedTime ("UseIgnitedTorch", -1, 0f);
 						CheckPointFlame.SetActive (true);
 					}
-				} else if (GameMechanics.TourchLightStatus == false) {
+				}
+				else if (GameMechanics.TourchLightStatus == false) {
 					if (GameMechanics.numberTorches == 0) {
 						Popup.GetComponent<Text> ().text = "YOU NEED A TORCH TOO IGNITE";
-					} else if (GameMechanics.numberTorches > 0) {
+					}
+					else if (GameMechanics.numberTorches > 0) {
 						Popup.GetComponent<Text> ().text = "THE TORCH IS NOT IGNITED";
 					}
 				}
@@ -33,8 +37,8 @@ public class CheckPointControl : MonoBehaviour {
 					else if (GameMechanics.numberTorches > 0) {
 						Popup.GetComponent<Text> ().text = "PRESS <color=#EC2027>E</color> TO IGNITE TORCH";
 						if (Input.GetKeyDown (KeyCode.E)) {
-							GameMechanics.TourchLightStatus = true;
-							TorchLight.SetActive (true);
+							//This also triggers an event
+							UseTorchAnimation.PlayInFixedTime ("IgniteTorch");
 						}
 					}
 				}

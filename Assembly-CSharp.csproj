@@ -101,6 +101,7 @@
      <Compile Include="Assets\Scripts\MenuScript.cs" />
      <Compile Include="Assets\Scripts\TorchLightControl.cs" />
      <Compile Include="Assets\Scripts\TorchPickup.cs" />
+     <Compile Include="Assets\Scripts\TorchUseEvent.cs" />
      <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Fog.shader" />

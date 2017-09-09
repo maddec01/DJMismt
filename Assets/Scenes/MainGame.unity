@@ -970,6 +970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ec94feb55d74448afff8a895309ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UseTorchAnimation: {fileID: 2001880134}
   CheckPointFlame: {fileID: 542868665}
   TorchLight: {fileID: 1202903556}
   Popup: {fileID: 683883623}
@@ -1144,6 +1145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ec94feb55d74448afff8a895309ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UseTorchAnimation: {fileID: 2001880134}
   CheckPointFlame: {fileID: 2062758407}
   TorchLight: {fileID: 1202903556}
   Popup: {fileID: 683883623}
@@ -6672,6 +6674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ec94feb55d74448afff8a895309ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UseTorchAnimation: {fileID: 2001880134}
   CheckPointFlame: {fileID: 1916893909}
   TorchLight: {fileID: 1202903556}
   Popup: {fileID: 683883623}
@@ -6782,7 +6785,7 @@ GameObject:
   - component: {fileID: 542868668}
   - component: {fileID: 542868667}
   m_Layer: 0
-  m_Name: CheckPointFlame
+  m_Name: CheckPointFlame (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11139,7 +11142,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &677340727 stripped
 GameObject:
@@ -11806,13 +11809,54 @@ RectTransform:
   - {fileID: 2104068706}
   - {fileID: 93423274}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &768441511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 768441513}
+  - component: {fileID: 768441512}
+  m_Layer: 0
+  m_Name: ExitTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &768441512
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 768441511}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.8167114, y: 4.213867, z: 14.241196}
+  m_Center: {x: 1.4083557, y: 1.6069336, z: -0.5269928}
+--- !u!4 &768441513
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 768441511}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -73, y: 0.7165842, z: 79.82}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &795795173
 GameObject:
   m_ObjectHideFlags: 0
@@ -12076,6 +12120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ec94feb55d74448afff8a895309ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UseTorchAnimation: {fileID: 2001880134}
   CheckPointFlame: {fileID: 999663867}
   TorchLight: {fileID: 1202903556}
   Popup: {fileID: 683883623}
@@ -12168,7 +12213,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_UseFovKick
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_CollisionDetection
@@ -12286,6 +12331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ec94feb55d74448afff8a895309ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UseTorchAnimation: {fileID: 2001880134}
   CheckPointFlame: {fileID: 1192723180}
   TorchLight: {fileID: 1202903556}
   Popup: {fileID: 683883623}
@@ -16245,7 +16291,7 @@ GameObject:
   - component: {fileID: 999663870}
   - component: {fileID: 999663869}
   m_Layer: 0
-  m_Name: CheckPointFlame
+  m_Name: CheckPointFlame (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19856,7 +19902,7 @@ GameObject:
   - component: {fileID: 1056559159}
   - component: {fileID: 1056559158}
   m_Layer: 0
-  m_Name: CheckPointFlame
+  m_Name: CheckPointFlame (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24135,7 +24181,7 @@ GameObject:
   - component: {fileID: 1192723183}
   - component: {fileID: 1192723182}
   m_Layer: 0
-  m_Name: CheckPointFlame
+  m_Name: CheckPointFlame (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27796,7 +27842,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1271246567
+  randomSeed: 1971126280
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -31979,7 +32025,16 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11100000, guid: 622107dd3c4416a4d9fcc501f396d549, type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: 858f862e22909a3488ed751af8fc5566, type: 2}
+    - target: {fileID: 11100000, guid: 622107dd3c4416a4d9fcc501f396d549, type: 3}
+      propertyPath: m_AnimatePhysics
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11100000, guid: 622107dd3c4416a4d9fcc501f396d549, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 622107dd3c4416a4d9fcc501f396d549, type: 3}
   m_IsPrefabParent: 0
 --- !u!1001 &1369865354
@@ -32307,7 +32362,7 @@ GameObject:
   - component: {fileID: 1433574071}
   - component: {fileID: 1433574070}
   m_Layer: 0
-  m_Name: CheckPointFlame
+  m_Name: CheckPointFlame (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35848,6 +35903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ec94feb55d74448afff8a895309ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UseTorchAnimation: {fileID: 2001880134}
   CheckPointFlame: {fileID: 1056559156}
   TorchLight: {fileID: 1202903556}
   Popup: {fileID: 683883623}
@@ -36086,6 +36142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ec94feb55d74448afff8a895309ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UseTorchAnimation: {fileID: 2001880134}
   CheckPointFlame: {fileID: 1433574068}
   TorchLight: {fileID: 1202903556}
   Popup: {fileID: 683883623}
@@ -36767,7 +36824,7 @@ GameObject:
   - component: {fileID: 1659154266}
   - component: {fileID: 1659154265}
   m_Layer: 0
-  m_Name: CheckPointFlame
+  m_Name: CheckPointFlame (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41077,6 +41134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ec94feb55d74448afff8a895309ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UseTorchAnimation: {fileID: 2001880134}
   CheckPointFlame: {fileID: 460047945}
   TorchLight: {fileID: 1202903556}
   Popup: {fileID: 683883623}
@@ -41752,6 +41810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ec94feb55d74448afff8a895309ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UseTorchAnimation: {fileID: 2001880134}
   CheckPointFlame: {fileID: 1659154263}
   TorchLight: {fileID: 1202903556}
   Popup: {fileID: 683883623}
@@ -41792,7 +41851,7 @@ GameObject:
   - component: {fileID: 1916893912}
   - component: {fileID: 1916893911}
   m_Layer: 0
-  m_Name: CheckPointFlame
+  m_Name: CheckPointFlame (Final)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45549,6 +45608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b959976301d4254f80f52bdbf83ed6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UseTorchAnimation: {fileID: 2001880134}
   Torch: {fileID: 2001880133}
   TorchLight: {fileID: 1202903556}
   PausePanel: {fileID: 93423273}
@@ -45573,6 +45633,36 @@ CapsuleCollider:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 622107dd3c4416a4d9fcc501f396d549, type: 3}
   m_PrefabInternal: {fileID: 1366325295}
+--- !u!95 &2001880134
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2001880133}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 42b79bef5775e32428389449dae7cfd2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &2001880135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2001880133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 080cb1efab132874f9255ee35875f89a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TorchLight: {fileID: 1202903556}
+  CheckPoint: {fileID: 0}
 --- !u!4 &2001880137 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 622107dd3c4416a4d9fcc501f396d549, type: 3}
@@ -45762,7 +45852,7 @@ GameObject:
   - component: {fileID: 2062758410}
   - component: {fileID: 2062758409}
   m_Layer: 0
-  m_Name: CheckPointFlame
+  m_Name: CheckPointFlame (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
