@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class CheckPointControl : MonoBehaviour {
 
-	public GameObject CheckPoint;
+	public GameObject CheckPointFlame;
 	public GameObject TorchLight;
 	public Text Popup;
 	
 	void OnCollisionStay (Collision collisionInfo) {
 		if (collisionInfo.collider.name == "Player") {
-			if (!CheckPoint.activeSelf) {
+			if (!CheckPointFlame.activeSelf) {
 				if (GameMechanics.TourchLightStatus == true) {
 					Popup.GetComponent<Text> ().text = "PRECIONE 'E' PARA ACENDER O CALDEIRÃO";
 					if (Input.GetKeyDown (KeyCode.E)) {
-						CheckPoint.SetActive (true);
+						CheckPointFlame.SetActive (true);
 					}
 				} else if (GameMechanics.TourchLightStatus == false) {
 					if (GameMechanics.numberTorches == 0) {
@@ -25,7 +25,7 @@ public class CheckPointControl : MonoBehaviour {
 					}
 				}
 			}
-			if (CheckPoint.activeSelf) {
+			if (CheckPointFlame.activeSelf) {
 				if (GameMechanics.TourchLightStatus == false) {
 					if (GameMechanics.numberTorches == 0) {
 						Popup.GetComponent<Text> ().text = "PRECISA DE ENCONTRAR UMA TOCHA";
@@ -47,7 +47,7 @@ public class CheckPointControl : MonoBehaviour {
 	}
 
 	void OnTriggerStay (Collider collisionInfo) {
-		if (CheckPoint.activeSelf) {
+		if (CheckPointFlame.activeSelf) {
 			GameMechanics.playerIsSafe = true;
 		}
 	}

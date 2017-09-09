@@ -11,6 +11,7 @@ public class MenuScript : MonoBehaviour
 
 	void Start () {
 		quitMenu.enabled = false;
+		//Unlock mouse
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
 	}

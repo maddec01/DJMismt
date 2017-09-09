@@ -8,6 +8,7 @@ public class GameMechanics : MonoBehaviour {
 
 	public GameObject Torch;
 	public GameObject TorchLight;
+	public GameObject PausePanel;
 	public static bool TourchLightStatus;
 	public static bool playerIsSafe;
 	public static bool playerIsDead;
@@ -19,8 +20,10 @@ public class GameMechanics : MonoBehaviour {
 	public Text NumberOfTorches;
 
 	void Start () {
+		//making sure
 		Torch.SetActive(false);
 		TorchLight.SetActive(false);
+		PausePanel.SetActive(false);
 		TourchLightStatus = false;
 		playerIsSafe = false;
 		playerIsDead = false;
@@ -28,9 +31,6 @@ public class GameMechanics : MonoBehaviour {
 	}
 
 	void OnCollisionStay (Collision collisionInfo) {
-		//Check collisions
-		//Debug.Log (collisionInfo.collider.name);
-
 		//Collide with bonfire
 		if (collisionInfo.collider.name == "modelBonfire") {
 
@@ -69,14 +69,15 @@ public class GameMechanics : MonoBehaviour {
 	}
 
 	void Update () {
+		//Prints Number of torches
 		NumberOfTorches.GetComponent<Text> ().text = numberTorches.ToString ();
 
-		//Debug.Log(playerIsSafe);
+		//Check Player safe status
 		if (playerIsSafe == true) {
 			SafeStatus.GetComponent<Text>().text = "OK";
 			OutOfLightTimer = 0f;
 		}
-		if (playerIsSafe == false) {
+		else if (playerIsSafe == false) {
 			if (playerIsDead == false) {
 				SafeStatus.GetComponent<Text>().text = "Move to light";
 			}
@@ -85,5 +86,35 @@ public class GameMechanics : MonoBehaviour {
 				SceneManager.LoadScene("GameOver");
 			}
 		}
+
+		//Pause menu
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			if (!PausePanel.activeSelf) {
+				PauseGame ();
+			}
+			else if (PausePanel.activeSelf) {
+				ContinueGame ();
+			}
+		}
+	}
+
+	public void PauseGame () {
+		Time.timeScale = 0;
+		PausePanel.SetActive(true);
+		//Unlock mouse
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
+	}
+
+	public void ContinueGame () {
+		Time.timeScale = 1;
+		PausePanel.SetActive(false);
+		//Lock mouse
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
+	}
+
+	public void ExitToMain () {
+		SceneManager.LoadScene("StartMenu");
 	}
 }
