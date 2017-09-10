@@ -10,15 +10,17 @@ public class GameMechanics : MonoBehaviour {
 	public GameObject Torch;
 	public GameObject TorchLight;
 	public GameObject PausePanel;
+	public Text PickPopup;
+	public Text SafeStatus;
+	public Text NumberOfTorches;
+	public float OutOfLightTime;
+	public AudioSource OutOfLightSound;
+	public static bool SoundPlayed;
 	public static bool TourchLightStatus;
 	public static bool playerIsSafe;
 	public static bool playerIsDead;
 	public static int numberTorches;
-	public float OutOfLightTime;
 	private float OutOfLightTimer;
-	public Text PickPopup;
-	public Text SafeStatus;
-	public Text NumberOfTorches;
 
 	void Start () {
 		//Make sure status is reset
@@ -28,6 +30,7 @@ public class GameMechanics : MonoBehaviour {
 		TourchLightStatus = false;
 		playerIsSafe = false;
 		playerIsDead = false;
+		SoundPlayed = false;
 		numberTorches = 0;
 	}
 
@@ -87,10 +90,16 @@ public class GameMechanics : MonoBehaviour {
 		if (playerIsSafe == true) {
 			SafeStatus.GetComponent<Text>().text = "OK";
 			OutOfLightTimer = 0f;
+			SoundPlayed = false;
+			//OutOfLightSound.Stop();
 		}
 		else if (playerIsSafe == false) {
 			if (playerIsDead == false) {
 				SafeStatus.GetComponent<Text>().text = "Move to light";
+				if (SoundPlayed == false) {
+					OutOfLightSound.Play();
+					SoundPlayed = true;
+				}
 			}
 			OutOfLightTimer += Time.deltaTime;
 			if (OutOfLightTimer > (OutOfLightTime)) {
