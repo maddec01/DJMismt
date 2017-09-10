@@ -58,6 +58,9 @@ public class GameMechanics : MonoBehaviour {
 
 	void OnTriggerEnter (Collider collisionInfo) {
 		if (collisionInfo.GetComponent<Collider>().name == "ExitTrigger") {
+			//Unlock cursor
+			Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
 			SceneManager.LoadScene("LevelComplete");
 		}
 	}
