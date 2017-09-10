@@ -58,7 +58,7 @@ public class GameMechanics : MonoBehaviour {
 
 	void OnTriggerEnter (Collider collisionInfo) {
 		if (collisionInfo.GetComponent<Collider>().name == "ExitTrigger") {
-			Debug.Log ("win");
+			SceneManager.LoadScene("LevelComplete");
 		}
 	}
 
@@ -88,14 +88,16 @@ public class GameMechanics : MonoBehaviour {
 
 		//Check Player safe status
 		if (playerIsSafe == true) {
-			SafeStatus.GetComponent<Text>().text = "OK";
+			SafeStatus.GetComponent<Text>().text = "";
 			OutOfLightTimer = 0f;
+			//Stop scary sound if safe
 			SoundPlayed = false;
-			//OutOfLightSound.Stop();
+			OutOfLightSound.Stop();
 		}
 		else if (playerIsSafe == false) {
 			if (playerIsDead == false) {
-				SafeStatus.GetComponent<Text>().text = "Move to light";
+				SafeStatus.GetComponent<Text>().text = "<color=#EC2027>MOVE TO THE LIGHT</color>";
+				//Play scary sound
 				if (SoundPlayed == false) {
 					OutOfLightSound.Play();
 					SoundPlayed = true;
@@ -121,6 +123,7 @@ public class GameMechanics : MonoBehaviour {
 	public void PauseGame () {
 		Time.timeScale = 0;
 		PausePanel.SetActive(true);
+		OutOfLightSound.Pause();
 		//Unlock mouse
 		//Not needed already implemented in MouseLook InternalLockUpdate(), mouse wasn't in focus after continue
 	}
@@ -128,6 +131,7 @@ public class GameMechanics : MonoBehaviour {
 	public void ContinueGame () {
 		Time.timeScale = 1;
 		PausePanel.SetActive(false);
+		OutOfLightSound.Play();
 		//Lock mouse (not needed)
 	}
 
